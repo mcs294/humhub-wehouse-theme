@@ -1,0 +1,159 @@
+/**
+ * Define or overwrite your theme selectors within this file.
+**/
+
+/* long "my spaces" menu without scrollbar*/
+ul#space-menu-spaces {
+    max-height: 100% !important;
+}
+
+/* hide search bar in "my spaces" menu */
+#space-menu-dropdown > li:nth-child(1){
+    display:none;
+}
+
+
+/* show topic input on spaces starting with "themen" */
+form[action^="/s/themen"] #postTopicContainer {
+    display: block !important;
+}
+
+/* restyle first post im space "Themen und Räume" .pinned-entry[data-content-key="101"] */
+
+.pinned-entry[data-content-key="101"] .wall-entry-header{
+    display: none;
+}
+
+.pinned-entry[data-content-key="101"] .wall-entry-footer{
+    display: none;
+}
+
+.pinned-entry[data-content-key="101"] .panel{
+    background-color: #f8f8f8 !important;
+}
+
+
+.pinned-entry[data-content-key="101"] .wall-entry-body{
+    padding: 0 0 0 0;
+}
+
+.pinned-entry[data-content-key="101"] .topic-label-list a{
+    margin-bottom: 4px;
+    width: 147px;
+}
+
+.pinned-entry[data-content-key="101"] .topic-label-list{
+    display: flex;
+    flex-flow: wrap;
+    margin-top: 10px;
+}
+
+.pinned-entry[data-content-key="101"] .wall-entry-body::before {
+    content: "Themen";
+    font-weight: 600;
+}
+
+.pinned-entry[data-content-key="101"] .content{
+    display: none;
+}
+
+
+.pinned-entry[data-content-key="101"] .topic-label-list a[data-topic-id="11"]{
+    order: 10;
+}
+
+.pinned-entry[data-content-key="101"] .topic-label-list a[data-topic-id="2"]{
+    order: 20;
+}
+
+.pinned-entry[data-content-key="101"] .topic-label-list a[data-topic-id="1"]{
+    order: 30;
+}
+
+.pinned-entry[data-content-key="101"] .topic-label-list a[data-topic-id="8"]{
+    order: 40;
+}
+
+.pinned-entry[data-content-key="101"] .topic-label-list a[data-topic-id="5"]{
+    order: 50;
+}
+
+.pinned-entry[data-content-key="101"] .topic-label-list a[data-topic-id="7"]{
+    order: 60;
+}
+
+.pinned-entry[data-content-key="101"] .topic-label-list a[data-topic-id="19"]{
+    order: 70;
+}
+
+.pinned-entry[data-content-key="101"] .topic-label-list a[data-topic-id="12"]{
+    order: 80;
+}
+
+.pinned-entry[data-content-key="101"] .topic-label-list a[data-topic-id="13"]{
+    order: 90;
+}
+
+.pinned-entry[data-content-key="101"] .topic-label-list a[data-topic-id="4"]{
+    order: 100;
+}
+
+.pinned-entry[data-content-key="101"] .topic-label-list a[data-topic-id="14"]{
+    order: 110;
+}
+
+.pinned-entry[data-content-key="101"] .topic-label-list a[data-topic-id="15"]{
+    order: 120;
+}
+
+.pinned-entry[data-content-key="101"] .topic-label-list a[data-topic-id="16"]{
+    order: 130;
+}
+
+.pinned-entry[data-content-key="101"] .topic-label-list a[data-topic-id="6"]{
+    order: 140;
+}
+
+.pinned-entry[data-content-key="101"] .topic-label-list a[data-topic-id="10"]{
+    order: 150;
+}
+
+.pinned-entry[data-content-key="101"] .topic-label-list a[data-topic-id="9"]{
+    order: 160;
+}
+
+.pinned-entry[data-content-key="101"] .topic-label-list a[data-topic-id="17"]{
+    order: 170;
+}
+
+.pinned-entry[data-content-key="101"] .topic-label-list a[data-topic-id="3"]{
+    order: 180;
+}
+
+.pinned-entry[data-content-key="101"] .topic-label-list a[data-topic-id="18"]{
+    order: 190;
+}
+
+.topic-remove-label span::after {
+    content: " \f057";
+    font-family: 'FontAwesome';
+    font-size: 11px;
+}
+
+.topic-remove-label span{
+    background-color: #21a1b3 !important;
+    color: #fff !important;
+}
+
+/*
+each(range(30), {
+    .layout-content-container:has(.topic-remove-label[data-topic-id="@{value}"]) .pinned-entry[data-content-key="101"] a[data-topic-id="@{value}"] {
+        display: none;
+    }
+});
+*/
+
+.layout-content-container:has(.topic-remove-label) .pinned-entry[data-content-key="101"]{
+    display: none !important;
+}
+
